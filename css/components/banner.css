@@ -1,4 +1,5 @@
 .banner {
+  position: relative; /* Conteneur parent pour que l'enfant puisse être positionné */
   background-image: url("../../images/849A4BB5-A197-498A-A11E-60893AFB2C8F_1_201_a.jpeg");
   background-size: cover;
   background-color: #f9f9f9;
@@ -8,4 +9,65 @@
   border-radius: 5px;
   box-shadow: 0 0 5px #ccc;
   height: 500px;
+}
+
+.container {
+  position: relative; /* Permet au bouton d'être positionné à l'intérieur de ce conteneur */
+  height: 100%; /* Occupe toute la hauteur de la bannière */
+}
+
+.btn-yellow {
+  position: absolute; /* Position absolue dans le conteneur parent */
+  bottom: 30px; /* Distance depuis le bas du conteneur */
+  right: 20px; /* Distance depuis la droite du conteneur */
+}
+/*.banner-link {
+  position: absolute;
+  bottom: 30px; Distance par rapport au bas de la bannière
+  left: 20px; Distance par rapport à la gauche de la bannière
+  text-decoration: none;
+  color: #d9d918; Couleur du lien
+  font-weight: bold;
+}
+
+.banner-link:hover {
+  color: #515309;  Couleur du lien au survol
+}
+
+.banner-link {
+  position: absolute;
+  bottom: 30px; /* Distance par rapport au bas de la bannière */
+ /* left: 20px; /*Distance par rapport à la gauche de la bannière */
+/* text-decoration: none;
+  color: rgb(214, 203, 38);
+}
+
+.banner-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: orange;
+}*/
+
+.banner-link {
+  position: absolute;
+  bottom: 30px; /* Distance par rapport au bas de la bannière */
+  left: 20px; /* Distance par rapport à la gauche de la bannière */
+  text-decoration: none;
+  color: rgb(214, 203, 38);
+  /*position: relative; /* Nécessaire pour le pseudo-élément ::after */
+}
+
+.banner-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Positionne la ligne légèrement sous le texte */
+  left: 0;
+  width: 0; /* La ligne commence avec une largeur de 0 */
+  height: 2px; /* Épaisseur de la ligne */
+  background-color: rgb(225, 222, 58); /* Couleur de la ligne */
+  transition: width 0.4s ease; /* Transition progressive */
+}
+
+.banner-link:hover::after {
+  width: 100%; /* La ligne prend toute la largeur du lien lors du survol */
 }

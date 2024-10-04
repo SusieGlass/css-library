@@ -1,0 +1,29 @@
+/* Titre dégradé jaune */
+@supports (-webkit-background-clip: text) {
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(90deg, whitesmoke, #f5e105);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    font-size: 40px;
+    margin: 20px 0;
+
+  }
+}
+/* Titre dégradé parme */
+@supports (-webkit-background-clip: text) {
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(90deg, whitesmoke, #850F8D);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    font-size: 40px;
+    margin: 20px 0;
+  }
+}
