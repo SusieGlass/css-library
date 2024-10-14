@@ -1,0 +1,14 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 1rem 0;
+}
+
+.card {
+  width: 100%; /* Pour que la carte prenne toute la largeur de la colonne */
+  padding-top: 100%; /* Astuce pour fixer la hauteur de manière proportionnelle à la largeur */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
